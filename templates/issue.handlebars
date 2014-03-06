@@ -1,0 +1,30 @@
+<dt id="issue{{getVal 'Id' this}}" data-id="{{getVal 'Id' this}}" tabindex="0">
+	<a href="#details{{getVal 'Id' this}}" tabindex="-1">
+	<h1 class="summary">{{getVal 'Assigned To' this}}</h1>
+	<h2 class="meta">
+		<span class="priority">{{getVal 'Priority' this}}/{{getVal 'Severity' this}}</span> <span class="status">{{getVal 'Status' this}}</span>
+	</h2>
+	</a>
+</dt>
+<dd id="details{{getVal 'Id' this}}">
+	<section data-field="Summary">
+		{{getVal 'Summary' this}}
+	</section>
+	<section data-field="Assigned to">
+		{{getVal 'Assigned To' this}}
+	</section>
+	<section data-field="Status">
+		{{getVal 'Status' this}}
+	</section>
+	<section data-field="Severity">
+		{{getVal 'Severity' this}}
+	</section>
+	<section data-field="Priority">
+		{{getVal 'Priority' this}}
+	</section>
+	<section data-field="Importance">
+		{{getVal 'Importance' this}}
+	</section>
+	<a href="#issue{{getVal 'Id' this}}" class="hide-info" tabindex="-1">&otimes;</a>
+	
+</dd>

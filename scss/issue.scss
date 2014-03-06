@@ -1,0 +1,129 @@
+#issues {
+    dt,dd{
+      width:calc(100% - #{$list-item-padding});
+      display: block;
+      clear:both;
+      background:#fefefe;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding:0;
+      margin:0 $list-item-padding;
+      &:before{
+        
+      }
+      
+    }
+    dt{
+      position:relative;
+      padding:0 $list-item-padding 0 ($list-label-width + 8px);
+      padding:0 $list-item-padding 0 calc(#{$list-label-width} + #{$list-item-padding});
+      margin-top:$list-item-padding;
+      height:5rem;
+      display:block;
+      a{text-decoration:none
+        }
+      &:target{
+        outline:1px solid grey;
+      }
+      &:before{
+          content:attr(data-id);
+          width:$list-label-width;
+          background:$bg-color-1;
+          color:$accent-color-1;
+          font-size:2rem;
+          height:5rem;
+          line-height:5rem;
+          position:absolute;
+          top:0;
+          bottom:0;
+          left:0;
+          text-align: center;
+        
+      }
+      h1{
+        line-height:2em;
+        font-size:1.5em;
+        margin:0;
+        color:$accent-color-1;
+        width:100%
+      }
+      h2{
+        line-height:2em;
+        font-size:1rem;
+        margin:0;
+        color:#696969;width:100%;
+        .status{
+          float:right
+        }
+        
+      }
+    }
+    dd{
+      display:none;
+      margin-bottom:$list-item-padding;
+      
+      section{
+        width:auto;
+        padding:$list-item-padding $list-item-padding $list-item-padding ($list-label-width + 8px);
+      padding:$list-item-padding $list-item-padding $list-item-padding calc(#{$list-label-width} + #{$list-item-padding});
+        position:relative;
+        line-height:1.5em;
+        clear:both;
+        float:left;
+        display: block;
+        min-height:1.5em;
+        margin:2px 0;
+        &:before{
+          content:attr(data-field);
+          width:$list-label-width;
+          background:$bg-color-1;
+          position:absolute;
+          top:0;
+          bottom:0;
+          left:0;
+          min-height:1.5em;
+          text-align: center;
+          display:block;
+          padding:$list-item-padding 0;
+                   
+        }
+      }
+      .hide-info{
+        width:100%;
+        display: block;
+        height:2em;
+        line-height:2em;
+        text-align:center;
+        background: $accent-color-1;
+        color:#fff;
+        font-size:2em;
+        float:left
+      }
+      
+    }
+    dd:target{
+      display:block;
+      clear:both;
+      float:left;
+      
+    }
+    .ok{
+        -webkit-animation:ok 1s;
+        animation:ok 1s;
+      &:before{
+        background:$ok-color;
+        color:#fcfcfc;
+      }
+    }
+    .nok{
+        -webkit-animation:nok 1s;
+        animation:nok 1s;
+      &:before{
+        background:$nok-color;
+        color:#fcfcfc;
+
+      }
+    }
+  
+}

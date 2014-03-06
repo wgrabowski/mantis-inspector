@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Mantis inspector</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="css/style.css" media="all" />
+		<script src="js/handlebars.js"></script>
+		<script src="js/quo.js"></script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/hammer.js/1.0.6/hammer.min.js"></script>
+		<script src="js/templates.js"></script>
+		<script src="js/csv2json.js"></script>
+
+	</head>
+	<body>
+		<header>
+			<h1>Mantis inspector &beta;</h1>
+			<input type="file" id="csvFileInput" onchange="handleFiles(this.files)" accept=".csv">
+			<input type="number" name="goto" id="goto" placeholder="goto" onblur="minspector.goTo(this)"/>
+		</header>
+		<section>
+			<dl id="issues"></dl>
+			
+		</section>
+		<footer></footer>
+		<script src="js/app.js"></script>
+	</body>
+</html>
